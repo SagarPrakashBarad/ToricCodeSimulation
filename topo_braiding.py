@@ -29,7 +29,7 @@ def apply_cxxxx_on_square(tc, upper_corner):
 
     if not all([is_inside_matching((tc.x, tc.y), l) for l in locs]):
         return
-    tc.circ.mct(control_qubits=[tc.ancillas[0]], target_qubit=[tc.regs[l[0]][l[1]] for l in locs])
+    tc.circ.mcx(control_qubits=[tc.ancillas[0]], target_qubit=[tc.regs[l[0]][l[1]] for l in locs])
 
 
 def apply_czzz_on_square(tc, upper_corner):
